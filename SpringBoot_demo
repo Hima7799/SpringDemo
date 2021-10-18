@@ -1,0 +1,24 @@
+Task:
+  Print a "Hello World!" greetings through hitting http://localhost:8080/(spring boot):
+  Documentation:
+      package springbootdemo;
+      import org.springframework.boot.*;
+      import org.springframework.boot.autoconfigure.*;
+      import org.springframework.stereotype.*;
+      import org.springframework.web.bind.annotation.*;
+
+      @Controller
+      @EnableAutoConfiguration
+      public class Springbootdemo {
+        @RequestMapping("/")
+        @ResponseBody
+        String greeting() {
+          return "Hello World!";
+        }
+        public static void main(String[] args) throws Exception{
+          SpringApplication.run(Springbootdemo.class, args);
+        }
+
+      }
+References Link:
+   1.https://spring.io/quickstart
